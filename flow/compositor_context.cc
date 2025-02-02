@@ -84,7 +84,7 @@ std::unique_ptr<CompositorContext::ScopedFrame> CompositorContext::AcquireFrame(
       *this, gr_context, canvas, view_embedder, root_surface_transformation,
       instrumentation_enabled, surface_supports_readback, raster_thread_merger,
       aiks_context);
-}
+}  // here we add a comment inside this folder 
 
 CompositorContext::ScopedFrame::ScopedFrame(
     CompositorContext& context,
@@ -204,7 +204,7 @@ void CompositorContext::ScopedFrame::PaintLayerTreeImpeller(
 ///        Gallery, we noticed that there are occassionally small partial
 ///        repaints which shave off trivial numbers of pixels.
 constexpr float kImpellerRepaintRatio = 0.7f;
-
+ 
 bool CompositorContext::ShouldPerformPartialRepaint(
     std::optional<DlRect> damage_rect,
     DlISize layer_tree_size) {
